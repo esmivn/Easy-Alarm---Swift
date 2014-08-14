@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A427BA3D199D631E00ED47BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA3C199D631E00ED47BC /* AppDelegate.swift */; };
+		A427BA3F199D631E00ED47BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA3E199D631E00ED47BC /* ViewController.swift */; };
+		A427BA42199D631E00ED47BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A427BA40199D631E00ED47BC /* Main.storyboard */; };
+		A427BA44199D631E00ED47BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A427BA43199D631E00ED47BC /* Images.xcassets */; };
+		A427BA50199D631E00ED47BC /* Easy_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A427BA4A199D631E00ED47BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A427BA2F199D631E00ED47BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A427BA36199D631E00ED47BC;
+			remoteInfo = "Easy Alarm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A427BA37199D631E00ED47BC /* Easy Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A427BA3B199D631E00ED47BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A427BA3C199D631E00ED47BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A427BA3E199D631E00ED47BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A427BA41199D631E00ED47BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A427BA43199D631E00ED47BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A427BA49199D631E00ED47BC /* Easy AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A427BA4E199D631E00ED47BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_AlarmTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A427BA34199D631E00ED47BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A427BA46199D631E00ED47BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A427BA2E199D631E00ED47BC = {
+			isa = PBXGroup;
+			children = (
+				A427BA39199D631E00ED47BC /* Easy Alarm */,
+				A427BA4C199D631E00ED47BC /* Easy AlarmTests */,
+				A427BA38199D631E00ED47BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A427BA38199D631E00ED47BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A427BA37199D631E00ED47BC /* Easy Alarm.app */,
+				A427BA49199D631E00ED47BC /* Easy AlarmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A427BA39199D631E00ED47BC /* Easy Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				A427BA3C199D631E00ED47BC /* AppDelegate.swift */,
+				A427BA3E199D631E00ED47BC /* ViewController.swift */,
+				A427BA40199D631E00ED47BC /* Main.storyboard */,
+				A427BA43199D631E00ED47BC /* Images.xcassets */,
+				A427BA3A199D631E00ED47BC /* Supporting Files */,
+			);
+			path = "Easy Alarm";
+			sourceTree = "<group>";
+		};
+		A427BA3A199D631E00ED47BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A427BA3B199D631E00ED47BC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A427BA4C199D631E00ED47BC /* Easy AlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */,
+				A427BA4D199D631E00ED47BC /* Supporting Files */,
+			);
+			path = "Easy AlarmTests";
+			sourceTree = "<group>";
+		};
+		A427BA4D199D631E00ED47BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A427BA4E199D631E00ED47BC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A427BA36199D631E00ED47BC /* Easy Alarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A427BA53199D631E00ED47BC /* Build configuration list for PBXNativeTarget "Easy Alarm" */;
+			buildPhases = (
+				A427BA33199D631E00ED47BC /* Sources */,
+				A427BA34199D631E00ED47BC /* Frameworks */,
+				A427BA35199D631E00ED47BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Easy Alarm";
+			productName = "Easy Alarm";
+			productReference = A427BA37199D631E00ED47BC /* Easy Alarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A427BA48199D631E00ED47BC /* Easy AlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A427BA56199D631E00ED47BC /* Build configuration list for PBXNativeTarget "Easy AlarmTests" */;
+			buildPhases = (
+				A427BA45199D631E00ED47BC /* Sources */,
+				A427BA46199D631E00ED47BC /* Frameworks */,
+				A427BA47199D631E00ED47BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A427BA4B199D631E00ED47BC /* PBXTargetDependency */,
+			);
+			name = "Easy AlarmTests";
+			productName = "Easy AlarmTests";
+			productReference = A427BA49199D631E00ED47BC /* Easy AlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A427BA2F199D631E00ED47BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Billyster Industries";
+				TargetAttributes = {
+					A427BA36199D631E00ED47BC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A427BA48199D631E00ED47BC = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A427BA36199D631E00ED47BC;
+					};
+				};
+			};
+			buildConfigurationList = A427BA32199D631E00ED47BC /* Build configuration list for PBXProject "Easy Alarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A427BA2E199D631E00ED47BC;
+			productRefGroup = A427BA38199D631E00ED47BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A427BA36199D631E00ED47BC /* Easy Alarm */,
+				A427BA48199D631E00ED47BC /* Easy AlarmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A427BA35199D631E00ED47BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A427BA42199D631E00ED47BC /* Main.storyboard in Resources */,
+				A427BA44199D631E00ED47BC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A427BA47199D631E00ED47BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A427BA33199D631E00ED47BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A427BA3F199D631E00ED47BC /* ViewController.swift in Sources */,
+				A427BA3D199D631E00ED47BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A427BA45199D631E00ED47BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A427BA50199D631E00ED47BC /* Easy_AlarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A427BA4B199D631E00ED47BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A427BA36199D631E00ED47BC /* Easy Alarm */;
+			targetProxy = A427BA4A199D631E00ED47BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A427BA40199D631E00ED47BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A427BA41199D631E00ED47BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A427BA51199D631E00ED47BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A427BA52199D631E00ED47BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A427BA54199D631E00ED47BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Easy Alarm/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A427BA55199D631E00ED47BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Easy Alarm/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A427BA57199D631E00ED47BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Easy AlarmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Alarm.app/Easy Alarm";
+			};
+			name = Debug;
+		};
+		A427BA58199D631E00ED47BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Easy AlarmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Alarm.app/Easy Alarm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A427BA32199D631E00ED47BC /* Build configuration list for PBXProject "Easy Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A427BA51199D631E00ED47BC /* Debug */,
+				A427BA52199D631E00ED47BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A427BA53199D631E00ED47BC /* Build configuration list for PBXNativeTarget "Easy Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A427BA54199D631E00ED47BC /* Debug */,
+				A427BA55199D631E00ED47BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A427BA56199D631E00ED47BC /* Build configuration list for PBXNativeTarget "Easy AlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A427BA57199D631E00ED47BC /* Debug */,
+				A427BA58199D631E00ED47BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A427BA2F199D631E00ED47BC /* Project object */;
+}
