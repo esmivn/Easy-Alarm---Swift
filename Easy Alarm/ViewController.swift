@@ -14,10 +14,11 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
     
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
+    @IBOutlet weak var amPmButton: UIButton!
     var sliderHour : InvisibleSlider!
     var sliderMinute : InvisibleSlider!
     var gradient : CAGradientLayer!
-    
+
     override func viewDidLoad() {
         
         sliderHour = InvisibleSlider(frame: CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height))
@@ -36,8 +37,12 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
         
         gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
-        gradient.colors = NSArray(objects: UIColor.yellowColor().CGColor, UIColor.blackColor().CGColor)
+        gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
         self.view.layer.insertSublayer(gradient, atIndex: 0)
+        
+        self.view.addSubview(amPmButton);
+        
+        self.setNeedsStatusBarAppearanceUpdate()
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -73,7 +78,21 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
         }
     
     }
+
     
+    @IBAction func toggleAmPm(sender: UIButton) {
+        if(sender.titleLabel.text == "AM"){
+            sender.setTitle("PM", forState: UIControlState.Normal)
+            gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
+        }else{
+            sender.setTitle("AM", forState: UIControlState.Normal)
+            gradient.colors = NSArray(objects: UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor)
+        }
+    }
+    
+    override func preferredStatusBarStyle()->UIStatusBarStyle{
+        return UIStatusBarStyle.LightContent
+    }
     
     
     func invisibleSliderWillStartMoving(let sliderView: InvisibleSlider){}
