@@ -14,18 +14,23 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
     
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
+    @IBOutlet weak var twoPointsLabel: UILabel!
     @IBOutlet weak var amPmButton: UIButton!
+    @IBOutlet weak var pillowBackground: UIImageView!
     var sliderHour : InvisibleSlider!
     var sliderMinute : InvisibleSlider!
     var gradient : CAGradientLayer!
 
+
     override func viewDidLoad() {
+        
+        self.view.addSubview(pillowBackground);
         
         sliderHour = InvisibleSlider(frame: CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height))
         sliderHour.delegate = self;
         sliderHour.maxValue = 12.0;
         sliderHour.minValue = 0;
-
+        
         self.view.addSubview(sliderHour)
 
         sliderMinute = InvisibleSlider(frame: CGRectMake(minuteLabel.frame.origin.x, 0, self.view.frame.size.width/2, self.view.frame.size.height))
@@ -35,12 +40,17 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
         
         self.view.addSubview(sliderMinute)
         
-        gradient = CAGradientLayer()
+        /*gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
         gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
-        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        self.view.layer.insertSublayer(gradient, atIndex: 0)*/
         
         self.view.addSubview(amPmButton);
+
+        self.view.bringSubviewToFront(minuteLabel)
+        self.view.bringSubviewToFront(hourLabel)
+        self.view.bringSubviewToFront(twoPointsLabel)
+        
         
         self.setNeedsStatusBarAppearanceUpdate()
         
@@ -83,10 +93,11 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
     @IBAction func toggleAmPm(sender: UIButton) {
         if(sender.titleLabel.text == "AM"){
             sender.setTitle("PM", forState: UIControlState.Normal)
-            gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
+            sender.hidden=true
+            //gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
         }else{
             sender.setTitle("AM", forState: UIControlState.Normal)
-            gradient.colors = NSArray(objects: UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor)
+            //gradient.colors = NSArray(objects: UIColor.whiteColor().CGColor, UIColor.whiteColor().CGColor)
         }
     }
     
