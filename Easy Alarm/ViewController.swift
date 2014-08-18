@@ -17,9 +17,11 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
     @IBOutlet weak var twoPointsLabel: UILabel!
     @IBOutlet weak var amPmButton: UIButton!
     @IBOutlet weak var pillowBackground: UIImageView!
+    @IBOutlet weak var settingsButton: UIButton!
     var sliderHour : InvisibleSlider!
     var sliderMinute : InvisibleSlider!
     var gradient : CAGradientLayer!
+
 
 
     override func viewDidLoad() {
@@ -45,14 +47,23 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
         gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
         self.view.layer.insertSublayer(gradient, atIndex: 0)*/
         
-        self.view.addSubview(amPmButton);
+        self.view.addSubview(amPmButton)
 
+        self.view.addSubview(settingsButton)
+        
         self.view.bringSubviewToFront(minuteLabel)
         self.view.bringSubviewToFront(hourLabel)
         self.view.bringSubviewToFront(twoPointsLabel)
         
-        
         self.setNeedsStatusBarAppearanceUpdate()
+        
+        let now = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh"
+        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+        hourLabel.text = dateFormatter.stringFromDate(now)
+        dateFormatter.dateFormat = "mm"
+        minuteLabel.text = dateFormatter.stringFromDate(now)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -93,7 +104,6 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
     @IBAction func toggleAmPm(sender: UIButton) {
         if(sender.titleLabel.text == "AM"){
             sender.setTitle("PM", forState: UIControlState.Normal)
-            sender.hidden=true
             //gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
         }else{
             sender.setTitle("AM", forState: UIControlState.Normal)
