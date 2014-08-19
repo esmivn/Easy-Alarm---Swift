@@ -10,7 +10,7 @@ import UIKit
 import QuartzCore
 
 
-class ViewController: UIViewController, InvisibleSliderDelegate {
+class ViewController: UIViewController, InvisibleSliderDelegate, AKPickerViewDelegate {
     
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
@@ -21,41 +21,12 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
     var sliderHour : InvisibleSlider!
     var sliderMinute : InvisibleSlider!
     var gradient : CAGradientLayer!
-
-
+    let pickerView = AKPickerView()
+    var titles : Array<String>!
 
     override func viewDidLoad() {
-        
-        self.view.addSubview(pillowBackground);
-        
-        sliderHour = InvisibleSlider(frame: CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height))
-        sliderHour.delegate = self;
-        sliderHour.maxValue = 12.0;
-        sliderHour.minValue = 0;
-        
-        self.view.addSubview(sliderHour)
 
-        sliderMinute = InvisibleSlider(frame: CGRectMake(minuteLabel.frame.origin.x, 0, self.view.frame.size.width/2, self.view.frame.size.height))
-        sliderMinute.delegate = self;
-        sliderMinute.maxValue = 59.0;
-        sliderMinute.minValue = 0;
-        
-        self.view.addSubview(sliderMinute)
-        
-        /*gradient = CAGradientLayer()
-        gradient.frame = self.view.bounds
-        gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
-        self.view.layer.insertSublayer(gradient, atIndex: 0)*/
-        
-        self.view.addSubview(amPmButton)
-
-        self.view.addSubview(settingsButton)
-        
-        self.view.bringSubviewToFront(minuteLabel)
-        self.view.bringSubviewToFront(hourLabel)
-        self.view.bringSubviewToFront(twoPointsLabel)
-        
-        self.setNeedsStatusBarAppearanceUpdate()
+        initInterface()
         
         let now = NSDate()
         let dateFormatter = NSDateFormatter()
@@ -98,6 +69,74 @@ class ViewController: UIViewController, InvisibleSliderDelegate {
             
         }
     
+    }
+
+    
+    func initInterface(){
+        
+        self.view.addSubview(pillowBackground);
+        
+        sliderHour = InvisibleSlider(frame: CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height))
+        sliderHour.delegate = self;
+        sliderHour.maxValue = 12.0;
+        sliderHour.minValue = 0;
+        self.view.addSubview(sliderHour)
+        
+        sliderMinute = InvisibleSlider(frame: CGRectMake(minuteLabel.frame.origin.x, 0, self.view.frame.size.width/2, self.view.frame.size.height))
+        sliderMinute.delegate = self;
+        sliderMinute.maxValue = 59.0;
+        sliderMinute.minValue = 0;
+        self.view.addSubview(sliderMinute)
+        
+        /*gradient = CAGradientLayer()
+        gradient.frame = self.view.bounds
+        gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
+        self.view.layer.insertSublayer(gradient, atIndex: 0)*/
+        
+        self.view.addSubview(amPmButton)
+        self.view.addSubview(settingsButton)
+        
+        self.view.bringSubviewToFront(minuteLabel)
+        self.view.bringSubviewToFront(hourLabel)
+        self.view.bringSubviewToFront(twoPointsLabel)
+        
+        self.setNeedsStatusBarAppearanceUpdate()
+
+        
+        self.pickerView.frame = CGRectMake(0, 400, self.view.frame.size.width, 80)
+        self.pickerView.delegate = self
+        self.view.addSubview(self.pickerView)
+        
+        self.pickerView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
+        
+        self.titles = ["Tokyo",
+        "Kanagawa",
+        "Osaka",
+        "Aichi",
+        "Saitama",
+        "Chiba",
+        "Hyogo",
+        "Hokkaido",
+        "Fukuoka",
+        "Shizuoka"]
+        
+        self.pickerView.reloadData()
+        
+    }
+    
+    
+    func numberOfItemsInPickerView(pickerView: AKPickerView!) -> UInt {
+        return UInt(self.titles.count)
+    }
+    
+    func pickerView(pickerView: AKPickerView!, didSelectItem item: Int)
+    {
+        print(self.titles[item]);
+    }
+    
+    func pickerView(pickerView: AKPickerView!, titleForItem item: Int) -> String!
+    {
+        return self.titles[item];
     }
 
     
