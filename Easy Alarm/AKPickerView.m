@@ -28,9 +28,9 @@
 
 - (void)initialize
 {
-    self.font = self.font ?: [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
+    self.font = self.font ?: [UIFont fontWithName:@"HelveticaNeue-Light" size:38];
     self.textColor = self.textColor ?: [UIColor whiteColor];
-    self.highlightedTextColor = self.highlightedTextColor ?: [UIColor blueColor];
+    self.highlightedTextColor = self.highlightedTextColor ?: [UIColor greenColor];
     
     [self.collectionView removeFromSuperview];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds
@@ -140,6 +140,7 @@
     
     if ([self.delegate respondsToSelector:@selector(pickerView:didSelectItem:)])
         [self.delegate pickerView:self didSelectItem:item];
+
 }
 
 - (void)didEndScrolling

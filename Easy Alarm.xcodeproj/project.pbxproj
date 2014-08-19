@@ -14,6 +14,7 @@
 		A427BA44199D631E00ED47BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A427BA43199D631E00ED47BC /* Images.xcassets */; };
 		A427BA50199D631E00ED47BC /* Easy_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */; };
 		A427BA5A199D6EF000ED47BC /* InvisibleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA59199D6EF000ED47BC /* InvisibleSlider.swift */; };
+		A44480C219A3FA820064D9FC /* CustomAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44480C119A3FA820064D9FC /* CustomAlarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A427BA4E199D631E00ED47BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_AlarmTests.swift; sourceTree = "<group>"; };
 		A427BA59199D6EF000ED47BC /* InvisibleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvisibleSlider.swift; sourceTree = "<group>"; };
+		A44480C119A3FA820064D9FC /* CustomAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,15 +83,15 @@
 		A427BA39199D631E00ED47BC /* Easy Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				A44480C019A3F81F0064D9FC /* AKPickerView */,
 				A427BA3C199D631E00ED47BC /* AppDelegate.swift */,
 				A427BA3E199D631E00ED47BC /* ViewController.swift */,
 				A427BA40199D631E00ED47BC /* Main.storyboard */,
 				A427BA43199D631E00ED47BC /* Images.xcassets */,
 				A427BA3A199D631E00ED47BC /* Supporting Files */,
 				A427BA59199D6EF000ED47BC /* InvisibleSlider.swift */,
-				A4136AB519A2E77900BEA152 /* AKPickerView.m */,
 				A4136AB419A2E77900BEA152 /* Easy Alarm-Bridging-Header.h */,
-				A4136AB719A2E8C600BEA152 /* AKPickerView.h */,
+				A44480C119A3FA820064D9FC /* CustomAlarm.swift */,
 			);
 			path = "Easy Alarm";
 			sourceTree = "<group>";
@@ -117,6 +119,15 @@
 				A427BA4E199D631E00ED47BC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A44480C019A3F81F0064D9FC /* AKPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A4136AB519A2E77900BEA152 /* AKPickerView.m */,
+				A4136AB719A2E8C600BEA152 /* AKPickerView.h */,
+			);
+			name = AKPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				A427BA5A199D6EF000ED47BC /* InvisibleSlider.swift in Sources */,
 				A4136AB619A2E77900BEA152 /* AKPickerView.m in Sources */,
 				A427BA3D199D631E00ED47BC /* AppDelegate.swift in Sources */,
+				A44480C219A3FA820064D9FC /* CustomAlarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

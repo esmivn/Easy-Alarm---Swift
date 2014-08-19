@@ -9,7 +9,6 @@
 import UIKit
 import QuartzCore
 
-
 class ViewController: UIViewController, InvisibleSliderDelegate, AKPickerViewDelegate {
     
     @IBOutlet weak var hourLabel: UILabel!
@@ -22,30 +21,31 @@ class ViewController: UIViewController, InvisibleSliderDelegate, AKPickerViewDel
     var sliderMinute : InvisibleSlider!
     var gradient : CAGradientLayer!
     let pickerView = AKPickerView()
-    var titles : Array<String>!
+    var items : Array<CustomAlarm>!
 
+    /*
+    / @description Called after the controller's view is loaded into memory.
+    */
     override func viewDidLoad() {
 
         initInterface()
-        
-        let now = NSDate()
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "hh"
-        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
-        hourLabel.text = dateFormatter.stringFromDate(now)
-        dateFormatter.dateFormat = "mm"
-        minuteLabel.text = dateFormatter.stringFromDate(now)
-        
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    /*
+    / @description Sent to the view controller when the app receives a memory warning.
+    */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
+    /*
+    / Called after user modified the value of invisible slider view
+    */
     func invisibleSliderViewDidChangeValue(let sliderView: InvisibleSlider){
     
         if(sliderView.isEqual(sliderHour)){
@@ -71,72 +71,80 @@ class ViewController: UIViewController, InvisibleSliderDelegate, AKPickerViewDel
     
     }
 
-    
+    /*
+    / Called on viewDidLoad to customizate some controls of the view
+    */
     func initInterface(){
         
+        //Adds the white pillow image
         self.view.addSubview(pillowBackground);
         
+        //Adds the slider responsible to change the hour
         sliderHour = InvisibleSlider(frame: CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height))
         sliderHour.delegate = self;
         sliderHour.maxValue = 12.0;
         sliderHour.minValue = 0;
         self.view.addSubview(sliderHour)
         
+        //Adds the slider responsible to change the minute
         sliderMinute = InvisibleSlider(frame: CGRectMake(minuteLabel.frame.origin.x, 0, self.view.frame.size.width/2, self.view.frame.size.height))
         sliderMinute.delegate = self;
         sliderMinute.maxValue = 59.0;
         sliderMinute.minValue = 0;
         self.view.addSubview(sliderMinute)
         
+        //Adds the stored alarms picker view
+        self.pickerView.frame = CGRectMake(0, 400, self.view.frame.size.width, 80)
+        self.view.addSubview(pickerView)
+        self.pickerView.delegate = self
+        self.pickerView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
+        self.items = [CustomAlarm(hour: "+")]
+        self.pickerView.reloadData()
+        
+        //The initial idea was to have a gradient background
         /*gradient = CAGradientLayer()
         gradient.frame = self.view.bounds
         gradient.colors = NSArray(objects: UIColor.blackColor().CGColor, UIColor.blackColor().CGColor)
         self.view.layer.insertSublayer(gradient, atIndex: 0)*/
         
-        self.view.addSubview(amPmButton)
-        self.view.addSubview(settingsButton)
-        
+        //Bring all elements to front of invisible sliders
+        self.view.bringSubviewToFront(amPmButton)
+        self.view.bringSubviewToFront(settingsButton)
         self.view.bringSubviewToFront(minuteLabel)
         self.view.bringSubviewToFront(hourLabel)
         self.view.bringSubviewToFront(twoPointsLabel)
+        //self.view.bringSubviewToFront(pickerView)
         
+        //Update the color of StatusBar
         self.setNeedsStatusBarAppearanceUpdate()
-
         
-        self.pickerView.frame = CGRectMake(0, 400, self.view.frame.size.width, 80)
-        self.pickerView.delegate = self
-        self.view.addSubview(self.pickerView)
-        
-        self.pickerView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
-        
-        self.titles = ["Tokyo",
-        "Kanagawa",
-        "Osaka",
-        "Aichi",
-        "Saitama",
-        "Chiba",
-        "Hyogo",
-        "Hokkaido",
-        "Fukuoka",
-        "Shizuoka"]
-        
-        self.pickerView.reloadData()
+   
         
     }
     
-    
+    //
     func numberOfItemsInPickerView(pickerView: AKPickerView!) -> UInt {
-        return UInt(self.titles.count)
+        return UInt(self.items.count)
     }
     
     func pickerView(pickerView: AKPickerView!, didSelectItem item: Int)
     {
-        print(self.titles[item]);
+        if(self.items[item].hour=="+"){
+            
+            hourLabel.text = "00"
+            minuteLabel.text = "00"
+            
+        }
+
     }
     
     func pickerView(pickerView: AKPickerView!, titleForItem item: Int) -> String!
     {
-        return self.titles[item];
+        var time = self.items[item].hour + ":" + self.items[item].minute
+        if(time == "+:"){
+            time = "+"
+        }
+        return time
     }
 
     
