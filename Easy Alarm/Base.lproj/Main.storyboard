@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
@@ -48,10 +49,20 @@
                                 <rect key="frame" x="16" y="147" width="288" height="270"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud2-fi-Hxn">
-                                <rect key="frame" x="254" y="32" width="50" height="50"/>
+                                <rect key="frame" x="16" y="33" width="44" height="44"/>
                                 <state key="normal" title="Button" image="settings_white">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvc-QF-a82">
+                                <rect key="frame" x="277" y="44" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewAlarm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ckP-gr-AVs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10303232177736074" green="0.38459756724359656" blue="0.81840183423913038" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,6 +88,7 @@
                         <outlet property="amPmButton" destination="VS1-Q3-EhJ" id="vng-0S-Toc"/>
                         <outlet property="hourLabel" destination="Wqe-lN-ESW" id="w9I-ZR-dAj"/>
                         <outlet property="minuteLabel" destination="8fO-Gp-dnV" id="TNh-uD-FPv"/>
+                        <outlet property="newAlarmButton" destination="Hvc-QF-a82" id="Sfo-tj-sCa"/>
                         <outlet property="pillowBackground" destination="yxK-QB-jr9" id="fUk-M6-Hd9"/>
                         <outlet property="settingsButton" destination="Ud2-fi-Hxn" id="Aln-0E-kHv"/>
                         <outlet property="twoPointsLabel" destination="Cch-uh-OEn" id="0Ok-iS-FNL"/>

@@ -28,7 +28,7 @@
 
 - (void)initialize
 {
-    self.font = self.font ?: [UIFont fontWithName:@"HelveticaNeue-Light" size:38];
+    self.font = self.font ?: [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
     self.textColor = self.textColor ?: [UIColor whiteColor];
     self.highlightedTextColor = self.highlightedTextColor ?: [UIColor greenColor];
     
