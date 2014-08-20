@@ -15,6 +15,9 @@
 		A427BA50199D631E00ED47BC /* Easy_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */; };
 		A427BA5A199D6EF000ED47BC /* InvisibleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427BA59199D6EF000ED47BC /* InvisibleSlider.swift */; };
 		A44480C219A3FA820064D9FC /* CustomAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44480C119A3FA820064D9FC /* CustomAlarm.swift */; };
+		A45B5F6B19A54D3800B5F149 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = A45B5F6A19A54D3800B5F149 /* iCarousel.m */; };
+		A45B5F6E19A54DAB00B5F149 /* CarouselExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B5F6D19A54DAB00B5F149 /* CarouselExample.swift */; };
+		A45B5F7019A5551B00B5F149 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45B5F6F19A5551B00B5F149 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,10 @@
 		A427BA4F199D631E00ED47BC /* Easy_AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_AlarmTests.swift; sourceTree = "<group>"; };
 		A427BA59199D6EF000ED47BC /* InvisibleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvisibleSlider.swift; sourceTree = "<group>"; };
 		A44480C119A3FA820064D9FC /* CustomAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlarm.swift; sourceTree = "<group>"; };
+		A45B5F6A19A54D3800B5F149 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		A45B5F6C19A54D5300B5F149 /* iCarousel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		A45B5F6D19A54DAB00B5F149 /* CarouselExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselExample.swift; sourceTree = "<group>"; };
+		A45B5F6F19A5551B00B5F149 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45B5F7019A5551B00B5F149 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +73,7 @@
 		A427BA2E199D631E00ED47BC = {
 			isa = PBXGroup;
 			children = (
+				A45B5F6F19A5551B00B5F149 /* QuartzCore.framework */,
 				A427BA39199D631E00ED47BC /* Easy Alarm */,
 				A427BA4C199D631E00ED47BC /* Easy AlarmTests */,
 				A427BA38199D631E00ED47BC /* Products */,
@@ -83,6 +92,7 @@
 		A427BA39199D631E00ED47BC /* Easy Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				A45B5F6919A54D0600B5F149 /* iCarousel */,
 				A44480C019A3F81F0064D9FC /* AKPickerView */,
 				A427BA3C199D631E00ED47BC /* AppDelegate.swift */,
 				A427BA3E199D631E00ED47BC /* ViewController.swift */,
@@ -128,6 +138,16 @@
 				A4136AB719A2E8C600BEA152 /* AKPickerView.h */,
 			);
 			name = AKPickerView;
+			sourceTree = "<group>";
+		};
+		A45B5F6919A54D0600B5F149 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				A45B5F6D19A54DAB00B5F149 /* CarouselExample.swift */,
+				A45B5F6A19A54D3800B5F149 /* iCarousel.m */,
+				A45B5F6C19A54D5300B5F149 /* iCarousel.h */,
+			);
+			name = iCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +252,9 @@
 				A427BA3F199D631E00ED47BC /* ViewController.swift in Sources */,
 				A427BA5A199D6EF000ED47BC /* InvisibleSlider.swift in Sources */,
 				A4136AB619A2E77900BEA152 /* AKPickerView.m in Sources */,
+				A45B5F6B19A54D3800B5F149 /* iCarousel.m in Sources */,
 				A427BA3D199D631E00ED47BC /* AppDelegate.swift in Sources */,
+				A45B5F6E19A54DAB00B5F149 /* CarouselExample.swift in Sources */,
 				A44480C219A3FA820064D9FC /* CustomAlarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
