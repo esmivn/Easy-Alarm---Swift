@@ -18,14 +18,14 @@ class CarouselExample: UIViewController, iCarouselDataSource, iCarouselDelegate
     {
         
         carousel = iCarousel()
-        for i in 0...99
+        for i in 0...20
         {
             items.append(i)
         }
         carousel.type = iCarouselType.Linear
         carousel.dataSource = self
         carousel.delegate = self
-        carousel.frame = CGRectMake(50, 200, 200, 200)
+        carousel.frame = CGRectMake(60, 200, 200, 200)
         self.view.addSubview(carousel)
         
         carousel.reloadData()
@@ -49,11 +49,11 @@ class CarouselExample: UIViewController, iCarouselDataSource, iCarouselDelegate
             //don't do anything specific to the index within
             //this `if (view == nil) {...}` statement because the view will be
             //recycled and used with other index values later
-            view = UIImageView(frame:CGRectMake(0, 0, 200, 200))
-            (view as UIImageView!).image = UIImage(named: "AppIcon.png")
+            view = UIImageView(frame:CGRectMake(0, 0, 250, 250))
+            (view as UIImageView!).image = UIImage(named: "pillow_transparentBackground")
             view.contentMode = .Center
             
-            label = UILabel(frame:view.bounds)
+            label = UILabel(frame: CGRectMake(view.bounds.origin.x, view.bounds.origin.y, view.bounds.size.width, view.bounds.size.height))
             label.backgroundColor = UIColor.clearColor()
             label.textAlignment = .Center
             label.font = label.font.fontWithSize(50)

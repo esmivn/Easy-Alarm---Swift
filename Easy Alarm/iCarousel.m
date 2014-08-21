@@ -141,7 +141,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     _perspective = -1.0/500.0;
     _contentOffset = CGSizeZero;
     _viewpointOffset = CGSizeZero;
-    _scrollSpeed = 1.0;
+    _scrollSpeed = 3.0;
     _bounceDistance = 1.0;
     _stopAtItemBoundary = YES;
     _scrollToItemBoundary = YES;
